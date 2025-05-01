@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import axios from 'axios';
+const baseURL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:4000';
+
+console.log( "my base url is =>",baseURL);
 
 function InputBox({setChange}) {
     const [input,setInput]=useState('');
@@ -10,7 +13,7 @@ function InputBox({setChange}) {
         try{
             const {data}=await axios({
                 method:'POST',
-                url:'http://localhost:3000/createtodo',
+                url:`${baseURL}/createtodo`,
                 data:{
                     title:input
                 }
