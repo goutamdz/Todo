@@ -34,7 +34,7 @@ function InputBox({setChange}) {
         <form onSubmit={(e)=>handleSubmit(e)} >
             <input 
                 type="text" 
-                placeholder="Search..." 
+                placeholder="Add task..." 
                 className='border-2 border-gray-300 rounded-md p-2 w-96'
                 value={input}
                 onChange={(e)=>setInput(e.target.value)}
